@@ -1,0 +1,7 @@
+#Internal package file, do not edit.
+#Mon May 20 11:12:24 CST 2019
+0.baseType=DIRECTORY
+0.base=E\:\\AndroidSpace\\AndroidCode-master\\app\\build\\intermediates\\dex\\release\\mergeDexRelease\\out
+0.path=classes.dex
+0.set=DEX
+count=1

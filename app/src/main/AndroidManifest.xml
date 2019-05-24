@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="pfg.com.androidcode">
-    <uses-sdk android:minSdkVersion="24" />
 
     <uses-permission android:name="android.permission.CAMERA" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
@@ -10,6 +9,7 @@
 
     <uses-feature android:name="android.hardware.location.gps" />
     <uses-feature android:name="android.hardware.camera" />
+    <uses-permission android:name="android.permission.INTERNET"/>
 
     <application
         android:allowBackup="true"
@@ -54,6 +54,11 @@
 
             android:screenOrientation="landscape">
             <!-- configure this activity to use landscape orientation -->
+        </activity>
+
+        <activity android:name="pfg.com.server.PlayVideoActivity"
+            android:screenOrientation="landscape">
+
         </activity>
 
     </application>

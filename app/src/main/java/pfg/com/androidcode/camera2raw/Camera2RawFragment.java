@@ -88,6 +88,7 @@ import java.util.concurrent.TimeUnit;
 import java.util.concurrent.atomic.AtomicInteger;
 
 import pfg.com.androidcode.AutoFitTextureView;
+import pfg.com.androidcode.LogTool;
 import pfg.com.androidcode.R;
 
 /**
@@ -708,6 +709,11 @@ public class Camera2RawFragment extends Fragment
             for (String cameraId : manager.getCameraIdList()) {
                 CameraCharacteristics characteristics
                         = manager.getCameraCharacteristics(cameraId);
+                LogTool.logd(TAG, "cameraId = "+cameraId);
+                for(int mode : characteristics.get(
+                        CameraCharacteristics.REQUEST_AVAILABLE_CAPABILITIES)) {
+                    LogTool.logd(TAG, "mode = "+ mode);
+                }
 
                 // We only use a camera that supports RAW in this sample.
                 if (!contains(characteristics.get(
